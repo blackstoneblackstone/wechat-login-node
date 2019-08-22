@@ -38,6 +38,7 @@ app.get('/', async (req, res) => {
     check(actoke) {
       // 这里可以写数据库逻辑
       // 在这里访问数据库获取，userInfo 就不会去微信拿了
+
     },
   });
   res.cookie('userId', userInfo.openid);
