@@ -14,10 +14,16 @@ const proxyOption = {
   changeOrigoin: true,
 };
 
+/**
+ * 微信认证需要的授权文件
+ */
 app.get('/MP_verify_Mti1B4FBENHQdphV.txt', async (req, res) => {
   res.send('Mti1B4FBENHQdphV');
 });
 
+/**
+ * 这里是入口，直接返回html
+ */
 app.get('/', async (req, res) => {
   const { code } = req.query;
   if (!code) {
