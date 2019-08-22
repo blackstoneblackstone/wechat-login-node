@@ -40,7 +40,8 @@ app.get('/', async (req, res) => {
       // 在这里访问数据库获取，userInfo 就不会去微信拿了
     },
   });
-  res.cookie('userId', userInfo);
+  res.cookie('userId', userInfo.openid);
+  res.cookie('userName', userInfo.nickname);
   res.setHeader('Content-Type', 'text/html');
   res.sendFile(`${__dirname}/index.html`);
 });
